@@ -1,0 +1,17 @@
+#!/bin/sh
+L=$(echo $LANG|sed 's/\..*//')
+SALIX_VERSION=13.1.1
+URL_SCHEMA=http://guide.salixos.org/$SALIX_VERSION/SalixStartupGuide-\${L}.pdf
+URL=$(eval echo $URL_SCHEMA)
+wget -N -q "$URL" -O /tmp/SalixStartupGuide-$L.pdf
+if [ $? -ne 0 ]; then
+  L=$(echo $L|sed 's/_.*//')
+  URL=$(eval echo $URL_SCHEMA)
+  wget -N -q "$URL" -O /tmp/SalixStartupGuide-$L.pdf
+  if [ $? -ne 0 ]; then
+    L=en
+    URL=$(eval echo $URL_SCHEMA)
+    wget -N -q "$URL" -O /tmp/SalixStartupGuide-$L.pdf
+  fi
+fi
+xdg-open /tmp/SalixStartupGuide-$L.pdf
