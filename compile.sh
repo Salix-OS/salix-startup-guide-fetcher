@@ -6,3 +6,5 @@ for i in `ls po/*.po`;do
 done
 
 intltool-merge po/ -d -u salix-startup-guide.desktop.in salix-startup-guide.desktop
+intltool-merge po/ -d -u salix-startup-guide-kde.desktop.in salix-startup-guide-kde.desktop
+
