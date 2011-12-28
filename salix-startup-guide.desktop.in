@@ -9,3 +9,4 @@ Terminal=false
 Type=Application
 Encoding=UTF-8
 Version=1.0
+NotShowIn=KDE
