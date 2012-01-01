@@ -23,5 +23,5 @@ EOF
 makepkg -l y -c n ../salix-startup-guide-$VER-noarch-1cp.txz
 cd ..
 md5sum salix-startup-guide-$VER-noarch-1cp.txz > salix-startup-guide-$VER-noarch-1cp.md5
-echo -e "wget,xdg-utils" > salix-startup-guide-$VER-noarch-1cp.dep
+echo -e "coreutils,sed,wget,xdg-utils" > salix-startup-guide-$VER-noarch-1cp.dep
 rm -rf pkg
