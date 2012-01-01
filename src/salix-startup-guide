@@ -1,5 +1,6 @@
 #!/bin/sh
-L=$(echo $LANG|sed 's/\..*//')
+#L=$(echo $LANG|sed 's/\..*//')
+L=en
 SALIX_VERSION=13.37
 URL_SCHEMA=http://people.salixos.org/tsuren/doc/SalixStartUpGuide_${SALIX_VERSION}_draft4.pdf
 URL=$(eval echo $URL_SCHEMA)
